@@ -2,12 +2,12 @@
 "Поверніть статус відповіді сервера після видалення."
 
 "https://jsonplaceholder.typicode.com/users - адреса куди робити запит"
+async function deleteUser(id) {
+  const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
+    method: "DELETE"
+  });
 
-
-function deleteUser(id) {
-  // Ваш код
+  return response; 
 }
-
-console.log(deleteUser(1));
 
 module.exports = deleteUser;
